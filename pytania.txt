@@ -1,0 +1,1 @@
+1. Dlaczego funkcje z 'fuctions.js' działają w 'script.js' bez importu?
