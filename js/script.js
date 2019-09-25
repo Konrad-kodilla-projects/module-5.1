@@ -10,9 +10,9 @@ const RESULTS = [
 ];
 
 
-let buttonRock = document.getElementById('button-rock');
-let buttonPaper = document.getElementById('button-paper');
-let buttonScissors = document.getElementById('button-scissors');
+const buttonRock = document.getElementById('button-rock');
+const buttonPaper = document.getElementById('button-paper');
+const buttonScissors = document.getElementById('button-scissors');
 
 let playerWins = document.getElementById('playerWins').innerText;
 playerWins = parseInt(playerWins);
