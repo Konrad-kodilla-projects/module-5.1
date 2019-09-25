@@ -1,3 +1,58 @@
 1. Dlaczego funkcje z 'fuctions.js' działają w 'script.js' bez importu?
 
-2. W jaki sposób się importuje funkcje między modułami?
+2. W jaki sposób się importuje funkcje między modułami? - dodać type="module"
+
+3. Ile czasu na stanowisku fronendowym spędza się na JS a ile pisze się CSSy i HMTLe?
+
+4. Jak dobrze skonfigurować debugger? - zrobione
+
+5. Czy używa się instrukcji switch zamiast if-else i w jakich kontekstach?
+
+6. Czy używa się skrócowej wersji if? ternary operator- jest popularny
+
+7. Biblioteki do testowania? czy testuje się czysty JS czy raczej frameworki
+
+8. Jaki jest stosunek rekruterów czy programistów do umiejętności testowania we froncie?
+
+9. W kodzie JS używa się 2 czy 4 spacjii? - beautify robi 4 a freeCodeCamp 2 (dokumentacja MDN - 2)
+
+10. Deklarowanie zmiennych bez var? Czy używa się tego i do czego służy?
+
+11. Czy w obiektach (słownikach) używać nawiasów dla kluczy stringów w parach klucz:"wartość" np.
+	var x = {
+	  "=kot":"filemon"
+	}
+
+12. Czy jest jakiś standard długości linii w JS?
+
+13. Używać deklaracji zmiennej var czy let?
+
+14. Dlaczego zamiast funcji pisze się stałą z funkcją anonimową? np.
+
+	const capitalizeString = (string) => {
+	  return string.charAt(0).toUpperCase() + string.slice(1);
+		this.
+	}
+
+	zamiast
+
+	function capitalize(string) {
+	  return string.charAt(0).toUpperCase() + string.slice(1);
+		this.
+	}
+
+15. Sklejać stringi przez 'text' + zmienna czy używać składni es6 `text i ${zmienna}`?
+
+
+============================
+odpowiedzi
+
+boundler: webpack, grunt, 
+
+ESlint konfiguracja -- do omówienia!
+
+double bang - if (!!zmienna)
+
+7. JEST - do reacta i może przetestować JS, yasmine, karma
+
+pretier - sam formatuje linie w JS
