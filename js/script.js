@@ -1,6 +1,3 @@
-var argMoveId, ComputerMove, computerMove, playerMove, randomNumber, playerInput;
-var argButtonName, buttonRock, buttonPaper, buttonScissors;
-
 import { printMessage, clearMessages } from './functions.js';
 
 const RESULTS = [
@@ -13,15 +10,15 @@ const RESULTS = [
 ];
 
 
-buttonRock = document.getElementById('button-rock');
-buttonPaper = document.getElementById('button-paper');
-buttonScissors = document.getElementById('button-scissors');
+let buttonRock = document.getElementById('button-rock');
+let buttonPaper = document.getElementById('button-paper');
+let buttonScissors = document.getElementById('button-scissors');
 
-var playerWins = document.getElementById('playerWins').innerText;
+let playerWins = document.getElementById('playerWins').innerText;
 playerWins = parseInt(playerWins);
 console.log('wygrane gracza: ' + playerWins);
 
-var computerWins = document.getElementById('computerWins').innerText;
+let computerWins = document.getElementById('computerWins').innerText;
 computerWins = parseInt(computerWins)
 
 function getMoveName(argMoveId) {
@@ -45,7 +42,7 @@ function displayResult(RESULTS, PlayerMove, ComputerMove) {
     if (PlayerMove == ComputerMove) {
         printMessage('Remis!')
     } else {
-        for (var i = 0; i < RESULTS.length; i++) {
+        for (let i = 0; i < RESULTS.length; i++) {
             console.log('odpalam pętlę i sprawdzam RESULT = ' + RESULTS[i]);
             if (PlayerMove == RESULTS[i][0] && ComputerMove == RESULTS[i][1]) {
                 if (RESULTS[i][2] == 1) {
@@ -73,10 +70,13 @@ function buttonClicked(argButtonName) {
 
     let playerMove = argButtonName;
     console.log('ruch gracza to: ' + playerMove);
-    randomNumber = Math.floor(Math.random() * 3 + 1);
+
+    let randomNumber = Math.floor(Math.random() * 3 + 1);
     console.log('wylosowana liczba to: ' + randomNumber);
-    computerMove = getMoveName(randomNumber);
+
+    let computerMove = getMoveName(randomNumber);
     console.log('ruch komputera to: ' + computerMove);
+
     displayResult(RESULTS, playerMove, computerMove);
 }
 
