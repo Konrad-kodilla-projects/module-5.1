@@ -1,4 +1,4 @@
-var argMoveId, PlayerMove, ComputerMove, computerMove, playerMove, randomNumber, playerInput;
+var argMoveId, ComputerMove, computerMove, playerMove, randomNumber, playerInput;
 var argButtonName, buttonRock, buttonPaper, buttonScissors;
 
 import { printMessage, clearMessages } from './functions.js';
@@ -71,7 +71,7 @@ function buttonClicked(argButtonName) {
 
     console.log(argButtonName + ' został kliknięty');
 
-    playerMove = argButtonName;
+    let playerMove = argButtonName;
     console.log('ruch gracza to: ' + playerMove);
     randomNumber = Math.floor(Math.random() * 3 + 1);
     console.log('wylosowana liczba to: ' + randomNumber);
@@ -81,15 +81,10 @@ function buttonClicked(argButtonName) {
 }
 
 
-buttonRock.addEventListener('click', function () {
-    buttonClicked('kamień');
-});
 
-buttonPaper.addEventListener('click', function () {
-    buttonClicked('papier');
-});
+buttonRock.addEventListener('click', () => buttonClicked('kamień'));
 
-buttonScissors.addEventListener('click', function () {
-    buttonClicked('nożyce');
-});
+buttonPaper.addEventListener('click', () => buttonClicked('papier'));
+
+buttonScissors.addEventListener('click', () => buttonClicked('nożyce'));
 
